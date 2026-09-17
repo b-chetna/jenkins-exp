@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/b-chetna/jenkins-exp.git'
+                    url: 'https://github.com/b-chetna/jenkins-exp.git'
             }
         }
         stage('Generate Report') {
@@ -16,8 +16,9 @@ pipeline {
         }
         stage('Archive Report') {
             steps {
-                archiveArtifacts artifacts: 'report.txt', fingerprint: true
+                archiveArtifacts artifacts: 'project2/report.txt', fingerprint: true
             }
         }
     }
 }
+```
