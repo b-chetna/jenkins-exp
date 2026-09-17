@@ -9,7 +9,9 @@ pipeline {
         }
         stage('Generate Report') {
             steps {
-                bat 'python app.py'
+                dir('project2') {
+                    bat 'python app.py'
+                }
             }
         }
         stage('Archive Report') {
